@@ -1,0 +1,17 @@
+.h-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+}
+.h-btn :hover {
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 30px;
+  width: 30px;
+  transition-duration: 4s;
+}
+.logo-img:hover {
+  transform: rotate(720deg);
+}

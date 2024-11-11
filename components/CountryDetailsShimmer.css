@@ -1,0 +1,179 @@
+/* Container for the shimmer effect */
+.country-details-container {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 32px;
+}
+
+.country-details.shimmer-img {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  margin-top: 64px;
+}
+
+.shimmer-img-container {
+  width: 35%;
+  height: 450px;
+  background-color: rgba(230, 230, 230, 0.6);
+  border: 1px solid #ddd;
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 230, 0.6) 25%,
+    rgba(200, 200, 200, 0.8) 50%,
+    rgba(230, 230, 230, 0.6) 75%
+  );
+  background-size: 200% 100%;
+}
+
+/* Details text container */
+.details-text-container {
+  flex-grow: 1;
+}
+
+.shimmer-element.shimmer-title {
+  width: 40%;
+  height: 40px;
+  background-color: rgba(230, 230, 230, 0.6);
+  margin-bottom: 16px;
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 230, 0.6) 25%,
+    rgba(200, 200, 200, 0.8) 50%,
+    rgba(230, 230, 230, 0.6) 75%
+  );
+  background-size: 200% 100%;
+}
+
+.details-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shimmer-element {
+  width: 50%;
+  height: 18px;
+  background-color: rgba(230, 230, 230, 0.6);
+  margin-bottom: 10px;
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 230, 0.6) 25%,
+    rgba(200, 200, 200, 0.8) 50%,
+    rgba(230, 230, 230, 0.6) 75%
+  );
+  background-size: 200% 100%;
+}
+
+.border-countries {
+  margin-top: 48px;
+  display: flex;
+  gap: 8px;
+}
+
+.border-shimmer {
+  width: 80px;
+  height: 24px;
+  background-color: rgba(230, 230, 230, 0.6);
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 230, 230, 0.6) 25%,
+    rgba(200, 200, 200, 0.8) 50%,
+    rgba(230, 230, 230, 0.6) 75%
+  );
+  background-size: 200% 100%;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* For smaller screens, adjust layout */
+@media (max-width: 940px) {
+  .country-details.shimmer-img {
+    flex-direction: column;
+    gap: 1px;
+    align-items: flex-start;
+  }
+
+  .shimmer-img-container {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    background: linear-gradient(
+      90deg,
+      rgba(230, 230, 230, 0.6) 25%,
+      rgba(200, 200, 200, 0.8) 50%,
+      rgba(230, 230, 230, 0.6) 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  .shimmer-element.shimmer-title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 700%;
+    max-width: 400px;
+    height: 40px;
+    background: linear-gradient(
+      90deg,
+      rgba(230, 230, 230, 0.6) 25%,
+      rgba(200, 200, 200, 0.8) 50%,
+      rgba(230, 230, 230, 0.6) 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  .shimmer-element {
+    width: 900%;
+    max-width: 300px;
+    background: linear-gradient(
+      90deg,
+      rgba(230, 230, 230, 0.6) 25%,
+      rgba(200, 200, 200, 0.8) 50%,
+      rgba(230, 230, 230, 0.6) 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  .shimmer-element.extra {
+    width: 2500%;
+    max-width: 370px;
+    background: linear-gradient(
+      90deg,
+      rgba(230, 230, 230, 0.6) 25%,
+      rgba(200, 200, 200, 0.8) 50%,
+      rgba(230, 230, 230, 0.6) 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  .shimmer-element.border-shimmer {
+    width: 1100%;
+    max-width: 400px;
+    background: linear-gradient(
+      90deg,
+      rgba(230, 230, 230, 0.6) 25%,
+      rgba(200, 200, 200, 0.8) 50%,
+      rgba(230, 230, 230, 0.6) 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  .border-countries {
+    width: 600%;
+    max-width: 150px;
+  }
+}
